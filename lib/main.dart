@@ -19,10 +19,19 @@ class MyApp extends StatelessWidget {
         home: Scaffold(
           appBar: AppBar(title: Text('Flutter Frontend')),
           body: Center(
-              child: Text(
-            'Halo $name !',
-            style:
-                TextStyle(fontWeight: FontWeight.bold, color: Colors.red[400]),
+              child: Text.rich(
+            TextSpan(
+              text: 'Hello ',
+              children: <TextSpan>[
+                TextSpan(
+                    text: 'bold',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+                TextSpan(
+                    text: ' world!',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, color: Colors.green[500])),
+              ],
+            ),
           )),
         ));
   }
