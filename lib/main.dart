@@ -19,9 +19,7 @@ class MyApp extends StatelessWidget {
         home: Scaffold(
             appBar: AppBar(title: Text('Flutter Frontend')),
             body: Center(
-                child: Image.asset(
-              'images/gambar_asset.jpg',
-              width: 300,
-            ))));
+                child: Image.network(
+                    'https://i.pinimg.com/564x/07/12/48/0712481ce168e928d1170bea674de30a.jpg'))));
   }
 }
