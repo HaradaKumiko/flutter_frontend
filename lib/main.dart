@@ -17,22 +17,9 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: Scaffold(
-          appBar: AppBar(title: Text('Flutter Frontend')),
-          body: Center(
-              child: Text.rich(
-            TextSpan(
-              text: 'Hello ',
-              children: <TextSpan>[
-                TextSpan(
-                    text: 'bold',
-                    style: TextStyle(fontWeight: FontWeight.bold)),
-                TextSpan(
-                    text: ' world!',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold, color: Colors.green[500])),
-              ],
-            ),
-          )),
-        ));
+            appBar: AppBar(title: Text('Flutter Frontend')),
+            body: Center(
+                child: Icon(Icons.audiotrack,
+                    size: 50, color: Colors.pink[400]))));
   }
 }
