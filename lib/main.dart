@@ -19,7 +19,9 @@ class MyApp extends StatelessWidget {
         home: Scaffold(
             appBar: AppBar(title: Text('Flutter Frontend')),
             body: Center(
-                child: Icon(Icons.audiotrack,
-                    size: 50, color: Colors.pink[400]))));
+                child: Image.asset(
+              'images/gambar_asset.jpg',
+              width: 300,
+            ))));
   }
 }
