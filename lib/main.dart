@@ -38,9 +38,15 @@ class MyApp extends StatelessWidget {
                     ),
                   ],
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [Text('Bank Account'), Text('9999999')],
+                Container(
+                  padding: EdgeInsets.all(10.0),
+                  decoration: BoxDecoration(
+                      color: Colors.red[200],
+                      border: Border.all(color: Colors.green)),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [Text('Bank Account'), Text('9999999')],
+                  ),
                 )
               ],
             )));
