@@ -18,8 +18,31 @@ class MyApp extends StatelessWidget {
         ),
         home: Scaffold(
             appBar: AppBar(title: Text('Flutter Frontend')),
-            body: Center(
-                child: Image.network(
-                    'https://i.pinimg.com/564x/07/12/48/0712481ce168e928d1170bea674de30a.jpg'))));
+            body: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  children: [
+                    Image.network(
+                      'https://avatars.githubusercontent.com/u/42530587?v=4',
+                      width: 250,
+                      height: 250,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('Welcome! '),
+                        Text('$name',
+                            style: TextStyle(fontWeight: FontWeight.bold))
+                      ],
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [Text('Bank Account'), Text('9999999')],
+                )
+              ],
+            )));
   }
 }
