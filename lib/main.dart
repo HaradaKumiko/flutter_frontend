@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
           body: ListView.builder(
               padding: EdgeInsets.all(10.0),
               itemCount: entries.length,
+              scrollDirection: Axis.horizontal,
               itemBuilder: (BuildContext context, int index) {
                 return Container(
                   width: 150,
