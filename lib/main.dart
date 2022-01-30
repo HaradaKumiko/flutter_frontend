@@ -17,38 +17,62 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: Scaffold(
-            appBar: AppBar(title: Text('Flutter Frontend')),
-            body: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Column(
-                  children: [
-                    Image.network(
-                      'https://avatars.githubusercontent.com/u/42530587?v=4',
-                      width: 250,
-                      height: 250,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('Welcome! '),
-                        Text('$name',
-                            style: TextStyle(fontWeight: FontWeight.bold))
-                      ],
-                    ),
-                  ],
-                ),
-                Container(
-                  padding: EdgeInsets.all(10.0),
-                  decoration: BoxDecoration(
-                      color: Colors.red[200],
-                      border: Border.all(color: Colors.green)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [Text('Bank Account'), Text('9999999')],
-                  ),
-                )
-              ],
-            )));
+          appBar: AppBar(title: Text('Flutter Frontend')),
+          body: ListView(
+            padding: EdgeInsets.all(10.0),
+            children: <Widget>[
+              Container(
+                height: 100,
+                color: Colors.amber[500],
+                child: Center(child: Text('Level A')),
+              ),
+              Container(
+                height: 100,
+                color: Colors.amber[300],
+                child: Center(child: Text('Level B')),
+              ),
+              Container(
+                height: 100,
+                color: Colors.amber[500],
+                child: Center(child: Text('Level C')),
+              ),
+              Container(
+                height: 100,
+                color: Colors.amber[300],
+                child: Center(child: Text('Level D')),
+              ),
+              Container(
+                height: 100,
+                color: Colors.amber[500],
+                child: Center(child: Text('Level E')),
+              ),
+              Container(
+                height: 100,
+                color: Colors.amber[300],
+                child: Center(child: Text('Level F')),
+              ),
+              Container(
+                height: 100,
+                color: Colors.amber[500],
+                child: Center(child: Text('Level G')),
+              ),
+              Container(
+                height: 100,
+                color: Colors.amber[300],
+                child: Center(child: Text('Level H')),
+              ),
+              Container(
+                height: 100,
+                color: Colors.amber[500],
+                child: Center(child: Text('Level I')),
+              ),
+              Container(
+                height: 100,
+                color: Colors.amber[300],
+                child: Center(child: Text('Level J')),
+              ),
+            ],
+          ),
+        ));
   }
 }
