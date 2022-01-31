@@ -19,10 +19,15 @@ class MyApp extends StatelessWidget {
         home: Scaffold(
           appBar: AppBar(title: Text('Flutter Frontend')),
           body: GridView.count(
+            padding: EdgeInsets.all(10),
             children: List.generate(20, (index) {
-              return Center(child: Text('Level $index'));
+              return Container(
+                  color: Colors.green,
+                  child: Center(child: Text('Level $index')));
             }),
-            crossAxisCount: 2,
+            crossAxisCount: 3,
+            mainAxisSpacing: 4,
+            crossAxisSpacing: 4,
           ),
         ));
   }
