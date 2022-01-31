@@ -18,22 +18,11 @@ class MyApp extends StatelessWidget {
         ),
         home: Scaffold(
           appBar: AppBar(title: Text('Flutter Frontend')),
-          body: ListView.separated(
-            padding: EdgeInsets.all(10.0),
-            itemCount: entries.length,
-            itemBuilder: (BuildContext context, int index) {
-              return Container(
-                width: 150,
-                height: 50,
-                color: Colors.amber[colorCodes[index]],
-                child: Center(child: Text('Entry ${entries[index]}')),
-              );
-            },
-            separatorBuilder: (context, index) => Divider(
-              height: 50,
-              thickness: 5,
-              color: Colors.purple[200],
-            ),
+          body: GridView.count(
+            children: List.generate(20, (index) {
+              return Center(child: Text('Level $index'));
+            }),
+            crossAxisCount: 2,
           ),
         ));
   }
