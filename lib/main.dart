@@ -18,16 +18,29 @@ class MyApp extends StatelessWidget {
         ),
         home: Scaffold(
           appBar: AppBar(title: Text('Flutter Frontend')),
-          body: GridView.count(
-            padding: EdgeInsets.all(10),
-            children: List.generate(20, (index) {
-              return Container(
-                  color: Colors.green,
-                  child: Center(child: Text('Level $index')));
-            }),
-            crossAxisCount: 3,
-            mainAxisSpacing: 4,
-            crossAxisSpacing: 4,
+          body: Stack(
+            alignment: Alignment.bottomLeft,
+            children: [
+              Center(
+                child: ClipRRect(
+                    borderRadius: BorderRadius.circular(80.0),
+                    child: Image.asset(
+                      'images/gambar_asset.jpg',
+                      width: 250,
+                      height: 250,
+                      fit: BoxFit.cover,
+                    )),
+              ),
+              Center(
+                  child: Container(
+                      color: Colors.green,
+                      padding: EdgeInsets.all(5),
+                      margin: EdgeInsets.only(top: 250),
+                      child: Text(
+                        '@$name',
+                        style: TextStyle(fontSize: 25),
+                      )))
+            ],
           ),
         ));
   }
