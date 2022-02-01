@@ -19,23 +19,23 @@ class MyApp extends StatelessWidget {
         home: Scaffold(
             appBar: AppBar(title: Text('Flutter Frontend')),
             body: Container(
-              child: Stack(
-                children: [
-                  Positioned(
-                    child: Container(
-                      child: Text("Lorep Ipsum"),
-                      color: Colors.yellow[400],
-                      padding: EdgeInsets.all(10),
-                    ),
-                    left: 40,
-                    top: 50,
-                  )
-                ],
+              padding: EdgeInsets.all(10),
+              child: Card(
+                child: Column(
+                  children: [
+                    Text('Daftar Kontak',
+                        style: TextStyle(
+                            fontSize: 30, fontWeight: FontWeight.bold)),
+                    ListTile(
+                      leading: Icon(Icons.people_sharp),
+                      title: Text('Farhan Rivaldy'),
+                      subtitle: Text('@farhanrivaldy'),
+                    )
+                  ],
+                ),
               ),
-              margin: EdgeInsets.only(top: 250, left: 100),
-              color: Colors.blue[300],
-              width: 250,
-              height: 300,
+              height: 250,
+              color: Colors.red[400],
             )));
   }
 }
