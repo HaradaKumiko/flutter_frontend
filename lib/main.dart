@@ -17,31 +17,25 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: Scaffold(
-          appBar: AppBar(title: Text('Flutter Frontend')),
-          body: Stack(
-            alignment: Alignment.bottomLeft,
-            children: [
-              Center(
-                child: ClipRRect(
-                    borderRadius: BorderRadius.circular(80.0),
-                    child: Image.asset(
-                      'images/gambar_asset.jpg',
-                      width: 250,
-                      height: 250,
-                      fit: BoxFit.cover,
-                    )),
+            appBar: AppBar(title: Text('Flutter Frontend')),
+            body: Container(
+              child: Stack(
+                children: [
+                  Positioned(
+                    child: Container(
+                      child: Text("Lorep Ipsum"),
+                      color: Colors.yellow[400],
+                      padding: EdgeInsets.all(10),
+                    ),
+                    left: 40,
+                    top: 50,
+                  )
+                ],
               ),
-              Center(
-                  child: Container(
-                      color: Colors.green,
-                      padding: EdgeInsets.all(5),
-                      margin: EdgeInsets.only(top: 250),
-                      child: Text(
-                        '@$name',
-                        style: TextStyle(fontSize: 25),
-                      )))
-            ],
-          ),
-        ));
+              margin: EdgeInsets.only(top: 250, left: 100),
+              color: Colors.blue[300],
+              width: 250,
+              height: 300,
+            )));
   }
 }
